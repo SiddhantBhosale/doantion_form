@@ -214,7 +214,7 @@ class UserDetails extends Formbase {
   public function validateForm(array &$form, FormStateInterface $form_state) {
 
     /*
-     * If designate is selected then check tha contribution is selected..
+     * If designate is selected then check if contribution is selected..
      */
     if (($form_state->getValue('designate') == 1) && ($form_state->getValue('contribution') == NULL)) {
       $form_state->setErrorByName('contribution', $this->t('Please select one of the Contribution.'));
@@ -231,7 +231,7 @@ class UserDetails extends Formbase {
       }
     }
     /*
-     * For validatng the amount.
+     * For validatng the billing_ZIP.
      */
     if (!(is_numeric($form_state->getValue('billing_ZIP')))) {
       $form_state->setErrorByName('billing_ZIP', $this->t('Please correct the billing_ZIP.'));
