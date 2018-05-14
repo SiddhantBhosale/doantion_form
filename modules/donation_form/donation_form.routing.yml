@@ -1,0 +1,26 @@
+doantion_form.form:
+  path: '/donate'
+  defaults:
+    _form: 'Drupal\donation_form\Form\DonateVoteUS'
+    _title: 'DONATE'
+  requirements:
+    _permission: 'access contact_us_form'
+# mycustomform.candidate_view:
+#   path: '/donate/candidate/{node}'
+#   defaults:
+#     _controller: 'Drupal\node\Controller\NodeViewController::view'
+#     _title: 'View'
+#   requirements:
+#     _permission: 'access user_details_form'
+# mycustomform.issue-group_view:
+#   path: '/donate/issue-group/{node}'
+#   defaults:
+#     _controller: 'Drupal\node\Controller\NodeViewController::view'
+#     _title: 'View'
+#     _entity_form: 'node.edit'
+#   requirements:
+#     _permission: 'access user_details_form'
+#     _entity_access: 'node.update'
+# # $url = Url::fromRoute('view.team.page_1', ['arg_0' => 1234]);
+#  _controller: '\Drupal\node\Controller\NodeViewController::view'
+# /Applications/MAMP/htdocs/drupal-8.5.1/modules/donation_form/donation_form.routing.yml

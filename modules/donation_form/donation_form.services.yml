@@ -1,0 +1,4 @@
+services:
+  donation_form.service:
+    class: Drupal\donation_form\DonationFormService
+    arguments: ['@database']

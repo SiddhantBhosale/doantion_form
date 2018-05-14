@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function donation_form_schema() {
+  $schema['user_details'] = array(
+    'fields' => array(
+      'donation_id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+       ),
+      'candidate_or_issue_name'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+       ),
+      'user_name'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+        ),
+      'email'=>array(
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        ),
+      'billing_address' => array(
+        'type'=>'varchar',
+        'length' => 40,
+        'not null' => True,
+        ),
+      'city' => array(
+        'type'=>'varchar',
+        'length' => 40,
+        'not null' => True,
+        ),
+      'state' => array(
+        'type'=>'varchar',
+        'length' => 20,
+        'not null' => True,
+        ),
+      'billing_ZIP' => array(
+        'type'=>'int',
+        'length' => 10,
+        'not null' => True,
+        ),
+      'occupation' => array(
+        'type'=>'varchar',
+        'length' => 40,
+        'not null' => True,
+        ),
+      'employer' => array(
+        'type'=>'varchar',
+        'length' => 40,
+        'not null' => True,
+        ),
+      'designate_contribution' => array(
+        'type'=>'varchar',
+        'length' => 20,
+        'not null' => False,
+        'default' => '',
+        ),
+      'amount' => array(
+        'type'=>'int',
+        'length' => 13,
+        'not null' => False,
+      ),
+    ),
+    'primary key' => array('donation_id'),
+  );
+  return $schema;
+
+}
