@@ -1,0 +1,8 @@
+registeration_module.form:
+  path: '/create-account'
+  defaults:
+    _form: 'Drupal\registration_module\Form\RegisterForm'
+    _title: 'Register'
+  requirements:
+    _register_user_access: 'TRUE'
+    _permission: 'access content'

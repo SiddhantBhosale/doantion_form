@@ -1,0 +1,5 @@
+name: Registration Module
+description: Creates a module for "Registering Users".
+package: Custom
+type: module
+core: 8.x

@@ -1,0 +1,16 @@
+<?php
+
+  /**
+   * Function to hook the mail function.
+   */
+
+use Drupal\Core\Mail;
+
+/**
+ * Hook to the mail function for sending custom email file.
+ */
+function registration_module_mail($key, &$message, $params) {
+  $body = $params['body'];
+  $message['subject'] = 'Successful account created';
+  $message['body'][] = Drupal\Core\Mail\MailFormatHelper::htmlToText($body);
+}

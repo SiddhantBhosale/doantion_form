@@ -1,0 +1,8 @@
+services:
+  check_access.user.register:
+    class: Drupal\registration_module\Access\RegisterAccessChecker
+    tags:
+      - { name: check_access, applies_to: _register_user_access }
+  # registration_module.user:
+  #   class: Drupal\registration_module\Form\RegisterForm
+  #   arguments: ['@language_manager']
